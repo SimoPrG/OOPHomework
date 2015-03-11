@@ -7,7 +7,7 @@
     public class GSM
     {
         //Problem 6. Add a static field and a property IPhone4S in the GSM class to hold the information about iPhone 4S.
-        private static GSM iPhone4S = new GSM("iPhone 4S", "Apple", 499.00m, "iVan", new Display(3.5, 16000000),
+        private static readonly GSM iPhone4S = new GSM("iPhone 4S", "Apple", 499.00m, "iVan", new Display(3.5, 16000000),
             new Battery("Non-removable Li-Po 1432 mAh battery (5.3 Wh)", 200.0, 8.0, Battery.BatteryTypes.LiIon));
 
         //Problem 1. information about a mobile phone device: model, manufacturer, price, owner,
@@ -65,10 +65,6 @@
             {
                 return iPhone4S;
             }
-            set
-            {
-                iPhone4S = value;
-            }
         }
 
         public string Model
@@ -77,7 +73,7 @@
             {
                 return this.model;
             }
-            set
+            private set
             {
                 if (string.IsNullOrWhiteSpace(value))
                     throw new FormatException("The Model cannot be null, empty or white spaces!");
@@ -91,7 +87,7 @@
             {
                 return this.manufacturer;
             }
-            set
+            private set
             {
                 if (string.IsNullOrWhiteSpace(value))
                     throw new FormatException("The Manufacturer cannot be null, empty or white spaces!");
@@ -105,7 +101,7 @@
             {
                 return this.price;
             }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException("Price cannot be negative!");
@@ -119,7 +115,7 @@
             {
                 return this.owner;
             }
-            set
+            private set
             {
                 this.owner = value;
             }
@@ -131,7 +127,7 @@
             {
                 return ObjectCopier.Clone(this.battery); //we return a deep copy of a reference type
             }
-            set
+            private set
             {
                 this.battery = value;
             }
@@ -143,7 +139,7 @@
             {
                 return ObjectCopier.Clone(this.display); //we return a deep copy of a reference type
             }
-            set
+            private set
             {
                 this.display = value;
             }

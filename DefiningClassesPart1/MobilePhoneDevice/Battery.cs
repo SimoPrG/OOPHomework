@@ -63,7 +63,7 @@
             {
                 return this.model;
             }
-            set
+            private set
             {
                 this.model = value;
             }
@@ -75,7 +75,7 @@
             {
                 return this.hoursIdle;
             }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException("HoursIdle cannot be negative!");
@@ -89,7 +89,7 @@
             {
                 return this.hoursTalk;
             }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException("HoursTalk cannot be negative!");
@@ -103,7 +103,7 @@
             {
                 return this.batteryType;
             }
-            set
+            private set
             {
                 this.batteryType = value;
             }

@@ -30,7 +30,7 @@ namespace MobilePhoneDevice
             {
                 return this.dateAndTime.ToString("dd.MM.yyyy HH:mm:ss");
             }
-            set
+            private set
             {
                 this.dateAndTime = DateTime.ParseExact(value, "d.M.yyyy H:m:s", CultureInfo.InvariantCulture);
             }
@@ -42,7 +42,7 @@ namespace MobilePhoneDevice
             {
                 return this.dialledNumber;
             }
-            set
+            private set
             {
                 if (!Regex.IsMatch(value, regex))
                     throw new FormatException("The DialledNumber format is invalid!");
@@ -56,7 +56,7 @@ namespace MobilePhoneDevice
             {
                 return this.duration.TotalSeconds;
             }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException("The Duration cannot be negative!");

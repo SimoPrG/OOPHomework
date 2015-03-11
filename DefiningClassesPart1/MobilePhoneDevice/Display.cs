@@ -40,7 +40,7 @@
             {
                 return this.size;
             }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException("Size cannot be negative!");
@@ -54,7 +54,7 @@
             {
                 return this.colorsCount;
             }
-            set
+            private set
             {
                 if (value < 0)
                     throw new ArgumentException("ColorsCount cannot be negative!");
