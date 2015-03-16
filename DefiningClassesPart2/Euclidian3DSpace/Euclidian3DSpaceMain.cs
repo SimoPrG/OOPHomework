@@ -24,7 +24,7 @@ namespace Euclidian3DSpace
     using System;
     class Euclidian3DSpaceMain
     {
-        static void Main()
+        public static void Main()
         {
             Point3D a = new Point3D(-3.65, 4.123, -1.7e-10);
             Console.WriteLine("Point A {0}", a);
