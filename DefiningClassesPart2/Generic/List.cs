@@ -52,7 +52,7 @@ namespace Generic
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Capacity", value, "The Capacity cannot be negatibe!");
+                    throw new ArgumentOutOfRangeException("Capacity", value, "The Capacity cannot be negative!");
                 }
 
                 this.capacity = value;
