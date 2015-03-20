@@ -38,6 +38,17 @@ namespace GenericMatrix
             Matrix<double> substraction = firstMatrix - secondMatrix;
 
             Console.WriteLine("Multiplication:\n{0}\nAddition:\n{1}\nSubstraction:\n{2}", multiplication, addition, substraction);
+
+            Matrix<int> zeroMatrix = new Matrix<int>(new[,] { { 0, 0 }, { 0, 0 } });
+
+            if (zeroMatrix)
+            {
+                Console.WriteLine("Matrix Has values.");
+            }
+            else
+            {
+                Console.WriteLine("Matrix is only 0s");
+            }
         }
 
         private static void FillSecondMatrixAddSubstract(Matrix<double> secondMatrix)
@@ -51,6 +62,8 @@ namespace GenericMatrix
                 }
             }
         }
+
+
 
         private static void FillFirstMatrixAddSubstract(Matrix<double> firstMatrix)
         {

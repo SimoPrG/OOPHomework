@@ -156,7 +156,7 @@
         public override string ToString()
         {
             return string.Format(CultureInfo.CreateSpecificCulture("en-US"), "[Model: {0}; Manufacturer: {1}; Price: {2:C}; Owner: {3}; Battery: {4}; Display: {5}]",
-                Model, Manufacturer, Price, Owner, Battery, Display);
+                Model, Manufacturer, Price, Owner, Battery.ToString(), Display.ToString());
         }
 
         //Problem 10. Add/Delete calls
