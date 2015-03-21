@@ -10,7 +10,7 @@ namespace Timer
 
     public class Timer
     {
-        private const int AThousandMilliseconds = 1000; // One second is 1000 miliseconds
+        private const int InMilliseconds = 1000; // One second is 1000 miliseconds
         private int seconds;
 
         public Timer(params TimerDlg[] methods) : this(1, methods)
@@ -53,7 +53,7 @@ namespace Timer
             while (true)
             {
                 this.Methods();
-                Thread.Sleep(this.Seconds * AThousandMilliseconds);
+                Thread.Sleep(this.Seconds * InMilliseconds);
             }
         }
     }
