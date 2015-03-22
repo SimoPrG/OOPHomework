@@ -6,9 +6,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class LongestStringFinder
+public class LongestStringFinder
 {
-    static void Main()
+    public static void Main()
     {
         string[] greetings = { "Hi!", "Hello!", "May God's peace be upon you!" };
 
