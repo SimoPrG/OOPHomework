@@ -4,21 +4,26 @@
     phone e-mail, course, specialty, university, faculty. Use an enumeration for the specialties, universities and faculties.
     Override the standard methods, inherited by System.Object: Equals(), ToString(), GetHashCode() and operators == and !=.
 */
+/*Problem 2. IClonable
+
+    Add implementations of the ICloneable interface. The Clone() method should deeply copy all object's fields into a new object of type Student.
+*/
+/*Problem 3. IComparable
+
+    Implement the IComparable<Student> interface to compare students by names (as first criteria, in lexicographic order) and by social security number (as second criteria, in increasing order).
+*/
+
 namespace CommonTypeSystem.ProblemStudent
 {
     using System;
 
-    public class Student
+    public class Student : ICloneable, IComparable<Student>
     {
         private readonly int ssn;
         private string firstName;
         private string middleName;
         private string lastName;
         private int course;
-
-        public Student()
-        {
-        }
 
         public Student(
             string firstName, string middleName, string lastName, int ssn, string permanentAddress, string mobilePhone,
@@ -124,7 +129,7 @@ namespace CommonTypeSystem.ProblemStudent
 
         public Faculties Faculty { get; private set; }
 
-        public Specialties Specialty { get; private set; }
+        public Specialties Specialty { get; internal set; }
 
         public override string ToString()
         {
@@ -191,6 +196,48 @@ namespace CommonTypeSystem.ProblemStudent
         public static bool operator !=(Student a, Student b)
         {
             return !object.Equals(a, b);
+        }
+
+        // We have only value types so we can return a new Student with the same fields/properties.
+
+        public object Clone()
+        {
+            return new Student(
+                this.FirstName, this.MiddleName, this.LastName, this.SSN, this.PermanentAddress, this.MobilePhone,
+                this.Email, this.Course, this.University, this.Faculty, this.Specialty);
+        }
+
+        public int CompareTo(Student other)
+        {
+            if (other == null)
+            {
+                return 1;
+            }
+
+            int result = this.FirstName.CompareTo(other.FirstName);
+
+            if (result != 0)
+            {
+                return result;
+            }
+
+            result = this.MiddleName.CompareTo(other.MiddleName);
+
+            if (result != 0)
+            {
+                return result;
+            }
+
+            result = this.LastName.CompareTo(other.LastName);
+
+            if (result != 0)
+            {
+                return result;
+            }
+
+            result = this.SSN.CompareTo(other.SSN);
+
+            return result;
         }
     }
 }
