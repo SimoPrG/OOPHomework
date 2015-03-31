@@ -13,9 +13,9 @@ class DivisibleBy7And3
 {
     static void Main()
     {
-        var array = new[] {3, 2, 2, 7, 35, 70, 0, -35, -15, -3, - 7, 315};
+        var array = new[] {3, 2, 2, 7, 21, 42, 0, -21, -15, -3, - 7};
 
-        var numbersDevisibleBy7And3 = array.Where(x => x % 35 == 0);
+        var numbersDevisibleBy7And3 = array.Where(x => x % 21 == 0);
         foreach (var number in numbersDevisibleBy7And3)
         {
             Console.WriteLine(number);
@@ -24,7 +24,7 @@ class DivisibleBy7And3
 
         var numbersDevisibleBy7And3LINQ =
             from number in array
-            where number % 35 == 0
+            where number % 21 == 0
             select number;
         foreach (var number in numbersDevisibleBy7And3LINQ)
         {
