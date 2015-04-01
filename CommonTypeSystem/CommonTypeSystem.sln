@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTypeSystem.ProblemStu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTypeSystem.ProblemPerson", "CommonTypeSystem.ProblemPerson\CommonTypeSystem.ProblemPerson.csproj", "{EB9BC086-361C-4AC3-B852-88D3210DA8EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTypeSystem.ProblemBitArray64", "CommonTypeSystem.ProblemBitArray64\CommonTypeSystem.ProblemBitArray64.csproj", "{32A0C6CC-F5B4-4103-B2DB-DE880E4D4B10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EB9BC086-361C-4AC3-B852-88D3210DA8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9BC086-361C-4AC3-B852-88D3210DA8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9BC086-361C-4AC3-B852-88D3210DA8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A0C6CC-F5B4-4103-B2DB-DE880E4D4B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A0C6CC-F5B4-4103-B2DB-DE880E4D4B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A0C6CC-F5B4-4103-B2DB-DE880E4D4B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A0C6CC-F5B4-4103-B2DB-DE880E4D4B10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
