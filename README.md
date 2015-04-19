@@ -1,5 +1,5 @@
 # OOPHomework
-In this repository I keep all the homework from the OOP training @ Telerik Academy. The training has 6 courses:
+In this repository I keep all the homework from the OOP course @ Telerik Academy. The course has 6 lessons:
 
 1. Defining Classes - Part 1 [Homework](https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/01.%20Defining%20Classes%20-%20Part%201/README.md)
 2. Defining Classes - Part 2 [Homework](https://github.com/TelerikAcademy/Object-Oriented-Programming/blob/master/02.%20Defining%20Classes%20-%20Part%202/README.md)
