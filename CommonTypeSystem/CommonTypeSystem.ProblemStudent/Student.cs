@@ -184,7 +184,7 @@ namespace CommonTypeSystem.ProblemStudent
         public override int GetHashCode()
         {
             return
-                this.firstName.GetHashCode() ^ this.middleName.GetHashCode() ^ this.SSN.GetHashCode()
+                this.FirstName.GetHashCode() ^ this.MiddleName.GetHashCode() ^ this.SSN.GetHashCode()
                 ^ this.University.GetHashCode() ^ this.Faculty.GetHashCode() ^ this.Specialty.GetHashCode();
         }
 
